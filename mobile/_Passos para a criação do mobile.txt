@@ -1,0 +1,29 @@
+
+Nota:
+npx (comando que executa um pacote, se não existir ele baixa e executa um pacote)
+
+
+PREPARANDO O AMBIENTE
+-intalar o expo cli: npm install -g expo-cli
+-expo init mobile
+-escolha a opção: blank (TypeScript)
+
+EXECUTANDO O PROJETO
+-cd mobile
+-npm/yarn start
+-leia o qrcode e abra o aplicativo no expo. (computador e celular na mesma rede).
+-Para rodar o backend digite: npm run dev
+
+
+
+CRIANDO O PROJETO Mobile
+-npm install expo-font @expo-google-fonts/ubuntu  @expo-google-fonts/roboto
+-npm install @react-navigation/native
+expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context @react-native-community/masked-view
+-npm install @react-navigation/stack
+-npm install expo react-native-maps
+-expo install constants
+-expo install react-native-svg
+-expo install expo-mail-composer
+-npm install react-native-picker-select
+=============================================

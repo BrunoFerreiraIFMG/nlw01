@@ -1,0 +1,93 @@
+
+
+
+
+CRIANDO O PROJETO
+-criar e entrar na pasta "backend"
+-npm init -y
+-npm install express --save
+-mkdir src
+-novo arquivo: src/server.ts
+-npm install @types/express -D
+-npm install typescript -D
+-npm install ts-node -D
+
+-crie o código do server.ts
+=============================================
+import express from 'express';
+
+const app = express();
+
+app.get('/users', (request, response) => {
+   console.log('olá mundo');
+   response.send('Olaaa.');
+   //response.json({mensagem: 'Olaaa.'});
+
+});
+
+app.listen(3333);
+=============================================
+
+
+EXECUTANDO O PROJETO
+-Criando o arquivo de configuração do typescript: npx tsc --init
+-Para executar o programa:  npx ts-node src/server.ts
+-Para testar o programa no browser: http://localhost:3333/users/
+
+
+
+MELHORANDO A EXECUÇÃO DO PROJETO (não precisar reiniciar o servidor)
+-npm install ts-node-dev –D
+-npx ts-node-dev src/server.ts
+-para melhorar o comando anterior, modifique a propriedade "script" do arquivo package.json:
+=============================================
+  "scripts": {
+    "dev": "ts-node-dev src/server.ts"
+  },
+=============================================
+-agora use o seguinte comando para rodar a aplicação: npm run dev
+
+
+
+
+CRIANDO MAIS RECURSOS PARA A APLICAÇÃO
+-instalando a biblioteca de conexão com o bd: npm install knex --save
+-instalando o banco de dados local: npm install sqlite3
+-instale também o plugin do sqlite para o vscode
+
+-depois de criar as migrations, use o comando para criar as tabelas: npx knex --knexfile knexfile.ts migrate:latest
+-depois de criar as seeds, use o script do package.json para inserir dados: npm run knex:seed
+
+-npm install cors --save
+-npm install @types/cors
+
+para visualizar a base de dados no plugin: crtl+shit+P || escolha "SQLite opem db"
+
+alt shift seta =>duplica
+ctrl+shit+P => keyboards para ver as teclas no broswer
+ctrt+k+s = > visualiza as teclas direto no vscode.
+
+site unsplash.com site de imagens gratuitas.
+
+
+============================================================
+RECURSOS AVANÇADOS
+
+-Instalando a biblioteca para fazer download de imagens: npm install multer e npm install @types/multer -D
+
+-para instalar o recurso de validação no lado do servidor use: o pacote "celebrate"
+
+
+-estrutura de inserção de points no postman:
+
+{
+        "name":"Jonny", 
+        "email":"DEV@HOTMAIL", 
+        "whatsapp":"379988765", 
+        "latitude":200,
+        "longitude":100,
+        "city":"Arcos",
+        "uf":"MG",
+        "items":[2,3]
+}
+
